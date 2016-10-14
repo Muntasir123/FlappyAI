@@ -3,7 +3,7 @@ A JavaScript Responsive Mobile Version of Flappy Bird
 
 Feel free to download and run the index.html file. 
 
-The "AI" portion of this uses an A* search algorithm. The original idea was to use recursion with the following. First we must
+The "AI" portion of this uses an A* search algorithm ( Still working on this). The original idea was to use recursion with the following. First we must
 generate a random array based on the position of the current `canvas`.
 
 for example  we can consider the following pseudo code
