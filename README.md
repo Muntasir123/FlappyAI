@@ -19,7 +19,7 @@ work our way either right to left, or top to bottom.
  
 I tested this out for smaller cases in java by using my own stopwatch class using `getTimeMillis()` method. 
 
-  public class MazeDemo {
+    public class MazeDemo {
 
      // function to print maze
      public static void printMaze(char[][] Maze, int i, int j) {
@@ -63,4 +63,5 @@ I tested this out for smaller cases in java by using my own stopwatch class usin
          return escapeMaze(Maze, i, j, canEscape);
      }
 
+This method has a pretty bad time complexity ( `O(b^k)`)
 To combat all this, I simply used my old Java grade 12 project's algorithm of using an A* search.
