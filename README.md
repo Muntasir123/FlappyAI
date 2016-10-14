@@ -19,48 +19,48 @@ work our way either right to left, or top to bottom.
  
 I tested this out for smaller cases in java by using my own stopwatch class using `getTimeMillis()` method. 
 
-`public class MazeDemo {
+  public class MazeDemo {
 
-   // function to print maze
-   public static void printMaze(char[][] Maze, int i, int j) {
-       int rows = Maze.length;
-       int cols = Maze[0].length;
-       if ((i < rows)) {
-           if (j < cols) {
-               System.out.print(Maze[i][j]);
-               j++;
-               printMaze(Maze, i, j);
-           } else if (j == cols) {
-               i++;
-               j = 0;
-               System.out.println();
-               printMaze(Maze, i, j);
-           }
-       }
-   }
+     // function to print maze
+     public static void printMaze(char[][] Maze, int i, int j) {
+         int rows = Maze.length;
+         int cols = Maze[0].length;
+         if ((i < rows)) {
+             if (j < cols) {
+                 System.out.print(Maze[i][j]);
+                 j++;
+                 printMaze(Maze, i, j);
+             } else if (j == cols) {
+                 i++;
+                 j = 0;
+                 System.out.println();
+                 printMaze(Maze, i, j);
+             }
+         }
+     }
 
-   // function to check whether can escape from maze.
-   public static boolean escapeMaze(char[][] Maze, int i, int j, boolean canEscape) {
-       int rows = Maze.length;
-       int cols = Maze[0].length;
-       if (i == rows || j == cols)
-           if (canEscape) // can escape
-               return true;
-           else
-               return false; // cannot escape
-       else if ((i < rows)) {
-           if (j < cols) {
-               if (Maze[i][j] == ' ') {
-                   canEscape = true;
-                   i++;
-                   j = 0;
-               } else {
-                   canEscape = false;
-                   j++;
-               }
-           }
-       }
-       return escapeMaze(Maze, i, j, canEscape);
-   }`
+     // function to check whether can escape from maze.
+     public static boolean escapeMaze(char[][] Maze, int i, int j, boolean canEscape) {
+         int rows = Maze.length;
+         int cols = Maze[0].length;
+         if (i == rows || j == cols)
+             if (canEscape) // can escape
+                 return true;
+             else
+                 return false; // cannot escape
+         else if ((i < rows)) {
+             if (j < cols) {
+                 if (Maze[i][j] == ' ') {
+                     canEscape = true;
+                     i++;
+                     j = 0;
+                 } else {
+                     canEscape = false;
+                     j++;
+                 }
+             }
+         }
+         return escapeMaze(Maze, i, j, canEscape);
+     }
 
 To combat all this, I simply used my old Java grade 12 project's algorithm of using an A* search.
