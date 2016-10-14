@@ -1,4 +1,4 @@
-# FlappyAI
+# FlappyAI live on http://muntasir-itracemail.info/flappy/index.html
 A JavaScript Responsive Mobile Version of Flappy Bird
 
 Feel free to download and run the index.html file. 
